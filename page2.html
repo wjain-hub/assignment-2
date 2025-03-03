@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Box</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="captcha-box">
+        <img src="https://i.imgflip.com/4tq4vx.gif" id="gif"/>
+        <h1 class="title">Analyzing...</h1>
+    
+        <div class="loading-animation">
+        </div>
+    </div>
+    <script>
+        var failureCount=localStorage.getItem("failureCount");
+        setTimeout(function () {
+            if (failureCount==1) {
+                window.location.href = "./page3.html";  
+            }
+            else if (failureCount==2) {
+           window.location.href = "./page4.html";  ;
+            }
+
+        }, 2000);
+      </script>
+
+</body>
+</html>

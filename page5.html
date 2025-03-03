@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Box</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="captcha-box">
+        <h1 class="title">Struggling? Press the red button to continue</h1>
+        <button id="redButton">Help!</button>
+        </div>
+    </div>
+    <script>
+        localStorage.setItem('failureCount', 0);
+        var redButton = document.getElementById('redButton');
+        redButton.addEventListener('click', function () {
+            console.log('red button clicked');
+            window.location.href = "./page6.html";
+        });
+      </script>
+</body>
+</html>
